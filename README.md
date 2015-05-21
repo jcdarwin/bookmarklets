@@ -8,14 +8,18 @@ Drag the link your're interested in to you browser bookmarks bar.
 This bookmarklet will report a message to the browser console when it sees a particular event (requires jQuery to be loaded on the page).
 
 ### The code:
-(function() {
-    if (jQuery) {
-        jQuery(document).bind('analytics', function(e){
-            // Do something as a consequence of receiving the event
-            console.log('I just saw an "analytics event: "', e);
-        });
-    }
-})()
+
+    (function() {
+        if (jQuery) {
+            jQuery(document).bind('analytics', function(e){
+                // Do something as a consequence of receiving the event
+                console.log('I just saw an "analytics event: "', e);
+            });
+        }
+    })()
 
 ### The link:
+
 [Drag me to the browser bookmarks bar](javascript:void%20function(){jQuery%26%26jQuery(document).bind(%22analytics%22,function(n){console.log('I%20just%20saw%20an%20%22analytics%20event:%20%22',n)})}();)
+
+If there's no link above (because Github has refused to include the JavaScript), simply copy and paste the above code in the dialog at [bookmarkleter](http://chriszarate.github.io/bookmarkleter/) to generate the bookmarklet, and then drag it to your browser bar.
